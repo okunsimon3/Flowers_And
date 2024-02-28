@@ -40,6 +40,10 @@ a {
     font-family: 'Montserrat Alternates', sans-serif;
     color: white;
 }
+li {
+    font-size: 20px;
+    color: white;
+}
 p {
     font-family: 'Montserrat Alternates', sans-serif;
     margin-bottom: 1rem;
@@ -47,9 +51,7 @@ p {
     line-height: 2rem;
     color: white;
 }
-li {
-    color: white;
-}
+
 label {
     color: white;
 }
@@ -118,7 +120,6 @@ body {
 /*Homepage image carousel*/
 #carouselExampleAutoplaying {
     grid-column: 1/13;
-    padding-bottom: 1rem;
 }
 /*Homepage grid*/
 #container {
@@ -196,18 +197,27 @@ body {
     border: solid white;
     color: black;
     border-radius: 1rem;
+    text-decoration: none;
+    color: white;
 }
 .grid-item-full div:nth-child(1) a{
     background-color: #79342E;
-    color: white;
 }
+.grid-item-full div:nth-child(1) a:hover{
+    background-color: #ac4c44;
+}
+
 .grid-item-full div:nth-child(2) a{
     background-color: #8C4C0F;
-    color: white;
+}
+.grid-item-full div:nth-child(2) a:hover{
+    background-color: #bb6e27;
 }
 .grid-item-full div:nth-child(3) a{
     background-color: #5A4554;
-    color: white;
+}
+.grid-item-full div:nth-child(3) a:hover{
+    background-color: #7a5e72;
 }
 /*Favorite flowers section*/
 .grid-item-home {
@@ -268,7 +278,7 @@ body {
 /*experience list*/
 .grid-item-about-left li::marker {
     content: '❀';
-    font-size: 1.5rem;
+    font-size: 1.rem;
     letter-spacing: 1rem;
 }
 
@@ -280,6 +290,7 @@ body {
     text-align: center;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    padding-bottom: 1rem;
 }
 h2:first-child {
     margin-top: 0;
@@ -395,14 +406,21 @@ h2:first-child {
 }
 
 .contact-container {
-    grid-column: 3/11;
+    grid-column: 5/13;
     position: relative;
+}
+.contact-container label {
+    font-size: 1.3rem;
+}
+.contact-container input {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
     padding-bottom: 2.5rem;
 }
 form div {
@@ -422,6 +440,7 @@ form input {
     border-radius: .5rem;
     border: 2px solid black;
     padding: .5rem;
+    max-width: 619px
 }
 .submit {
     grid-column: span 2;
@@ -436,10 +455,42 @@ form input {
     width: 100%;
     top: 0;
     z-index: -1;
-    filter: brightness(40%)saturate(80%);
+    filter: brightness(30%)saturate(80%);
 }
 
-
+/*Special Ocassions Page*/
+.grid-item-special-left {
+    grid-column: 1/4;
+    margin-top: 1rem;
+}
+.grid-item-special-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem 0 0 1rem;
+    margin-bottom: -0.15rem
+}
+.grid-item-special-right {
+    grid-column: 4/13;
+    background-color: rgb(71, 71, 71);
+    margin-top: 1rem;
+    border-radius: 0 1rem 1rem 0;
+}
+.grid-item-special-right h3 {
+    text-align: center;
+    padding-top: 1rem;
+}
+.grid-item-special-right ul {
+    padding: 2rem;
+    padding-left: 3rem;
+}
+.grid-item-special-right p {
+    padding-bottom: 1rem;
+}
+.grid-item-special-right li::marker {
+    content: '❀';
+    font-size: 1.5rem;
+    letter-spacing: .7rem;
+}
 /*Footer*/
 footer {
     text-align: center;
@@ -454,12 +505,13 @@ footer ul li {
     padding-right: 1rem;
 }
 footer h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: white;
 }
 footer a {
     text-decoration: none;
     color: white;
+    font-size: 1rem;
 }
 footer a:hover {
     text-decoration: underline;
