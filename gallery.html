@@ -8,11 +8,23 @@
     <meta name="description" content="A floral arrangement and bouquet portfolio website for Kathleen Dulen">
     <link rel="stylesheet" href="../Flowers/css/reset.css" type="text/css">
     <link rel="stylesheet" href="../Flowers/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="../Flowers/css/mobile.css" type="text/css" media="(max-width: 820px)"/>
+    <script defer src="script.js"></script>
+    <script>
+      function openNav() {
+          document.querySelector('nav').classList.add('open')
+      }
+
+      function closeNav() {
+          document.querySelector('nav').classList.remove('open')
+      }
+    </script>
 </head>
 <body>
     <header id="top-panel">
-        <a href=index.html><img src="../Flowers/images/flowers.png" alt="Flowers& logo with a little flower"></a>
+        <a href=index.html><img src="../Flowers/images/flowers_resized.png" alt="Flowers& logo with a little flower"></a>
         <nav id="nav-gallery">
+            <img id="close-button" src="../Flowers/images/close.png" alt="close button" onclick="closeNav()"/>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -20,6 +32,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <img id="open-button" src="../Flowers/images/hamburger-icon.png" alt="open button" onclick="openNav()"/>
     </header>
     <main id="container">
         <h2 class="title">Photo Gallery</h2>

@@ -59,6 +59,14 @@ img {
     border-radius: 1rem;
 }
 
+/*Open and Close buttons Mobile*/
+@media screen and (min-width: 820px) {
+    #close-button,
+    #open-button {
+        display: none;
+    }
+}
+
 /*Navigation*/
 nav ul {
     list-style: none;
@@ -300,7 +308,25 @@ h2:first-child {
     text-align: center;
     padding-top: 1rem;
 }
-/*Gallery Page*/
+/*Gallery Lightbox*/
+#lightbox {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+}
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+}
 
 /*Gallery navigation*/
 
