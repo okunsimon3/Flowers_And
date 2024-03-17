@@ -11,12 +11,19 @@
     z-index: 3;
     padding-top: 2rem;
 }
-#top-panel nav ul li a {
+
+#top-panel img {
+    height: 3.25rem;
+}
+nav a {
     border-radius: 0.5rem;
     width: 100%;
     background: #161616;
 }
 
+#open-button {
+    padding-right: 1rem;
+}
 #close-button {
     margin-bottom: 1rem;
     margin-top: -1rem;
@@ -24,7 +31,6 @@
 nav.open {
     right: 0 !important;
 }
-
 nav ul li,
 nav ul li a {
     display: flex;
@@ -35,4 +41,101 @@ nav ul li a {
 
 nav ul li {
     margin-bottom: 1rem;
+}
+/*Top panel mobile*/
+#top-panel {
+    padding: 0;
+}
+
+/*home mobile layout*/
+.grid-item-home-left {
+    grid-column: 1/13;
+}
+.grid-item-home-right {
+    grid-column: 1/13;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.grid-item-full {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.home-card {
+    margin-bottom: 2rem;
+}
+.home-card:last-child {
+    margin-bottom: 0;
+}
+/*Special Occasions Mobile*/
+.grid-item-special-left {
+    display: none;
+}
+#carouselmobile1 {
+    display: block;
+    padding: 1rem 4rem 0 4rem;
+}
+
+
+.grid-item-special-right {
+    grid-column: 1/13;
+    border-radius: 1rem;
+}
+
+
+/*about mobile layout*/
+.grid-item-about-left {
+    grid-column: 1/13;
+    margin-bottom: 0;
+}
+.grid-item-about-right {
+    grid-column: 1/13;
+    padding: 1rem 0 1rem 0;
+}
+.experience .grid-item-about-right {
+    grid-column: 1/13;
+}
+.gallery-text h3 {
+    font-size: 2rem;
+}
+
+/*Photo Gallery Mobile*/
+.gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+#container {
+    margin: 1rem 1rem 0 1rem;
+}
+
+/*Contact mobile*/
+
+form {
+    display: block;
+    padding: 0;
+}
+form div {
+    padding-left: 0;
+}
+.grid-item-contact-left {
+    grid-column: 1/13;
+}
+.grid-item-contact-left h3 {
+    display: none;
+}
+.contact-container {
+    grid-column: 1/13;
+}
+.contact-container img {
+    display: none;
+}
+.contact-container input {
+    width: 100%;
+}
+.contact-container textarea {
+    width: 100%;
+}
+.submit {
+    width: 95.5%;
+    font-size: 1.5rem;
 }

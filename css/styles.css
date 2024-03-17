@@ -95,7 +95,7 @@ nav li:last-child {
 #top-panel img {
     border-radius: 0;
     width: auto;
-    height: 4rem;
+    height: 4.5rem;
 }
 
 #top-panel a {
@@ -120,7 +120,6 @@ body {
 /*Homepage*/
 
 /*Home navigation*/
-
 #nav-home li:nth-child(1) a{
     color: #AAFFB1;
 }
@@ -137,6 +136,10 @@ body {
 }
 .grid-item-home-left {
     grid-column: 1/7;
+}
+.grid-item-home-left video{
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
 }
 .grid-item-home-right {
     grid-column: 8/13;
@@ -159,7 +162,8 @@ body {
 
 .grid-item-full {
     background-color: #AAFFB1;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding: 4rem;
     justify-content: space-between;
     position: relative;
@@ -244,51 +248,36 @@ body {
 /*About page grid*/
 .grid-item-about-left {
     grid-column: 1/6;
-    margin-bottom: 4rem;
 }
 .grid-item-about-left img {
     width: 100%;
     height: auto;
 }
 .grid-item-about-right {
-    grid-column: 8/13;
+    grid-column: 7/13;
 }
 .grid-item-about-right img {
     width: 100%;
     height: auto;
 }
-.experience {
-    background-color: #AAFFB1;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    padding: 4rem;
-    padding-top: 1rem;
 
-}
-
-.experience .grid-item-about-right {
-    grid-column: 8/13;
-}
-.experience li {
-    color: black;
-}
-
-.experience p {
-    color: black;
-}
-.experience h2 {
-    color: black;
-}
 .grid-item-about-right h3 {
     text-align: center;
 }
 
-/*experience list*/
-.grid-item-about-left li::marker {
-    content: '❀';
-    font-size: 1.rem;
-    letter-spacing: 1rem;
+.grid-item-about-right p {
+    text-indent: 50px;
 }
+
+#galGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+    margin-top: 1rem;
+}
+
+
 
 
 
@@ -315,7 +304,7 @@ h2:first-child {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .9);
     display: none;
 }
 #lightbox.active {
@@ -327,7 +316,9 @@ h2:first-child {
     max-width: 90%;
     max-height: 80%;
 }
-
+#carouselmobile1 {
+    display: none;
+}
 /*Gallery navigation*/
 
 #nav-gallery li:nth-child(3) a{
@@ -362,14 +353,7 @@ h2:first-child {
     cursor: pointer;
     transition: .5s ease-in-out;
 }
-.gallery-card .gallery-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    cursor: pointer;
-    transition: .5s ease-in-out;
-}
+
 .gallery-card:hover .gallery-image img {
     transform: scale(1.5)
 }
@@ -394,13 +378,7 @@ h2:first-child {
     text-shadow: 2px 2px 4px #000000;
 
 }
-.gallery-card:hover .gallery-text h3{
-    opacity: 1;
-    animation: move-down .3s linear;
-    width: 100%;
-    text-shadow: 2px 2px 4px #000000;
 
-}
 .w-1 {
     grid-column: span 1;
 }
@@ -430,7 +408,31 @@ h2:first-child {
 #nav-contact li:nth-child(4) a{
     color: #AAFFB1;
 }
+.grid-item-contact-left {
+    grid-column: 1/5;
+}
+.grid-item-contact-left h3 {
+    text-align: center;
+}
 
+.grid-item-contact-left ul li {
+    padding: 1rem;
+    padding-left: 0;
+}
+.grid-item-contact-left ul li a {
+    text-decoration: none;
+    color: #AAFFB1;
+}
+
+.grid-item-contact-left ul li a:hover {
+    color: #609e65;
+}
+
+.grid-item-contact-left li::marker {
+    content: '❀';
+    font-size: 1.rem;
+    letter-spacing: 1rem;
+}
 .contact-container {
     grid-column: 5/13;
     position: relative;
@@ -466,7 +468,7 @@ form input {
     border-radius: .5rem;
     border: 2px solid black;
     padding: .5rem;
-    max-width: 619px
+    width: 100%;
 }
 .submit {
     grid-column: span 2;
@@ -508,6 +510,7 @@ form input {
 .grid-item-special-right ul {
     padding: 2rem;
     padding-left: 3rem;
+    padding-bottom: 0;
 }
 .grid-item-special-right p {
     padding-bottom: 1rem;
@@ -516,6 +519,18 @@ form input {
     content: '❀';
     font-size: 1.5rem;
     letter-spacing: .7rem;
+}
+
+.mobileimg {
+    display: none;
+}
+
+/*Classes Page */
+.grid-item-classes-right {
+    grid-column: 8/13;
+}
+.grid-item-classes-right h3 {
+    text-align: center;
 }
 /*Footer*/
 footer {
