@@ -2,6 +2,11 @@ const lightbox = document.createElement('div')
 lightbox.id = 'lightbox'
 document.body.appendChild(lightbox)
 
+const closeButton = document.createElement('button');
+closeButton.innerHTML = '&times;';
+closeButton.classList.add('close-btn');
+lightbox.appendChild(closeButton);
+
 
 const images = document.querySelectorAll('.gallery-image img')
 images.forEach(image => {
@@ -9,14 +14,13 @@ images.forEach(image => {
         lightbox.classList.add('active')
         const img = document.createElement('img')
         img.src = image.src
-        while (lightbox.firstChild) {
-            lightbox.removeChild(lightbox.firstChild)
+        while (lightbox.firstChild && lightbox.firstChild !== closeButton) {
+            lightbox.removeChild(lightbox.firstChild);
         }
-        lightbox.appendChild(img)
+        lightbox.insertBefore(img, closeButton);
     })
 });
 
-lightbox.addEventListener('click', e=> {
-    if(e.target !== e.currentTarget) return
-    lightbox.classList.remove('active')
+closeButton.addEventListener('click', () => {
+    lightbox.classList.remove('active');
 })
