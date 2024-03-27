@@ -18,6 +18,8 @@
             document.querySelector('nav').classList.remove('open')
         }
       </script>
+       
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
     <header id="top-panel">
@@ -43,7 +45,7 @@
             </ul>
         </div>
         <div class="contact-container">
-            <form method="post" action="send-email.php" >
+            <form method="post" action="send-email.php" id="sendEmail">
                 <div>
                   <label for="firstName">First Name</label><br>
                   <input name="firstName" type="text" required />
@@ -63,7 +65,8 @@
                 <div class="text-box">
                     <textarea name="details" class="span-4" cols="79" rows="10" placeholder="Please provide some details..."></textarea>
                 </div>
-                    <button class="submit">Submit</button>
+                <button class="submit">Submit</button>
+                <div class="g-recaptcha" data-sitekey="6Le2zKUpAAAAADAk8DNluOSgkLEaVb27uVL_Lc0j"></div>
             </form>
             <img src="../Flowers/images/bouquet_contact.jpg" alt="picture of a flower arrangement">
         </div>
