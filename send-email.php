@@ -24,7 +24,7 @@ if(!empty($_POST)) {
         echo '<h2>Please check the the captcha form.</h2>';
         exit;
       }
-      $secretKey = "6Le2zKUpAAAAACxjdYTwrY1ii-yPJPvJH_N78jKd";
+      $secretKey = "6Lf_B6cpAAAAAJ68kCsUnR2QR8jzr17v1wtrVbmg";
       $ip = $_SERVER['REMOTE_ADDR'];
       // post request to server
       $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
