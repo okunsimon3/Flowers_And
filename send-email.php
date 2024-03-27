@@ -3,8 +3,10 @@
 
 if(!empty($_POST)) {
     $recipient = "okunsimon3@gmail.com";
-    $header = "This is the title of the email";
-    $message = "This is the message of the email";
+    $headers = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $title = "New Message From Contact Form";
+    $message = "";
     $firstname = strip_tags($_POST["firstName"]);
     $lastname = strip_tags($_POST["lastName"]);
     if(!empty($_POST["phoneNumber"])) {
@@ -15,7 +17,7 @@ if(!empty($_POST)) {
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $details = strip_tags($_POST["details"]);
 
-    $message .= "This user has submitted the form {$firstname} {$lastname} {$phonenumber} {$email} {$details}";
+    $message .= "This user has submitted the form \n {$firstname} {$lastname}, \n {$phonenumber}, \n {$email}, \n {$details}";
 
     if(isset($_POST['g-recaptcha-response'])){
         $captcha=$_POST['g-recaptcha-response'];
@@ -37,9 +39,9 @@ if(!empty($_POST)) {
               echo '<h2>You are spammer ! Get the @$%K out</h2>';
       }
 
-    mail($recipient,$header,$message);
+    mail($recipient,$title,$message);
 
-    header("Location: localhost:");
+    header("Location: https://flowersand.us/email.html");
 
 }
 
