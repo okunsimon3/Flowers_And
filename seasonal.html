@@ -6,9 +6,10 @@
     <title>Flowers& Seasonal Arrangements</title>
     <meta name="author" content="Kathleen Dulen">
     <meta name="description" content="A floral arrangement and bouquet portfolio website for Kathleen Dulen">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/reset.css" type="text/css">
     <link rel="stylesheet" href="/css/styles.css" type="text/css">
-    <link rel="stylesheet" href="/css/mobile.css" type="text/css" media="(max-width: 820px)"/>
+    <link rel="stylesheet" href="/css/mobile.css" type="text/css" media="(max-width: 823px)"/>
     <script>
         function openNav() {
             document.querySelector('nav').classList.add('open')
@@ -37,11 +38,73 @@
         <div id="container">
             <h2 class="title">Seasonal Arrangements</h2>
             <div class="grid-item-seasonal-left">
-                <img src="/images/bouquet_2.jpg" alt="A picture of a bride in a wedding dress posing with a bouquet">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                      </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="/images/seasonal_1.jpg" class="d-block w-100" alt="man wearing Bape in a city">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="/images/seasonal_2.jpg" class="d-block w-100" alt="the inside of the Beijing Bape store">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="/images/seasonal_3.jpg" class="d-block w-100" alt="Kanye and Terikayi Boyz wearing Bape">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="/images/seasonal_4.jpg" class="d-block w-100" alt="Kanye and Terikayi Boyz wearing Bape">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="/images/seasonal_5.jpg" class="d-block w-100" alt="Kanye and Terikayi Boyz wearing Bape">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
             <div class="grid-item-seasonal-right">
+                <div id="carouselmobile2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="/images/seasonal_1.jpg" class="d-block w-100" alt="man wearing Bape in a city">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="/images/seasonal_2.jpg" class="d-block w-100" alt="the inside of the Beijing Bape store">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="/images/seasonal_3.jpg" class="d-block w-100" alt="Kanye and Terikayi Boyz wearing Bape">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="/images/seasonal_4.jpg" class="d-block w-100" alt="Kanye and Terikayi Boyz wearing Bape">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselmobile2" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselmobile2" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
                 <h3>Holidays</h3>
-                <img class="mobileimg" src="/images/bouquet_2.jpg" alt="A picture of a bride in a wedding dress posing with a bouquet">
                 <ul>
                     <li>Thanksgiving</li>
                     <p>Want a stunning centerpiece for your thanksgiving table? Bring the beautiful fall colors into your home and leave your friends and family in awe.</p>
@@ -67,5 +130,8 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 </body>
 </html>

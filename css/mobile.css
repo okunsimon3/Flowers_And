@@ -82,7 +82,25 @@ nav ul li {
     grid-column: 1/13;
     border-radius: 1rem;
 }
-
+.grid-item-special-right ul {
+    padding-top: 0;
+}
+.mobileimg {
+    display: block;
+    width: 91%;
+    margin: 1rem;
+}
+/*Seasonal arrangments page mobile */
+.grid-item-seasonal-left {
+    display: none;
+}
+.grid-item-seasonal-right {
+    grid-column: 1/13;
+}
+#carouselmobile2 {
+    display: block;
+    padding: 0 4rem 1rem 4rem;
+}
 
 /*about mobile layout*/
 .grid-item-about-left {
@@ -99,7 +117,11 @@ nav ul li {
 .gallery-text h3 {
     font-size: 2rem;
 }
-
+/*Classes Page mobile*/
+.grid-item-classes-right {
+    grid-column: 1/13;
+    padding-top: 1rem;
+}
 /*Photo Gallery Mobile*/
 .gallery-container {
     grid-template-columns: repeat(2, 1fr);
@@ -138,4 +160,7 @@ form div {
 .submit {
     width: 100%;
     font-size: 1.5rem;
+}
+.g-recaptcha {
+    padding-left: 0;
 }
