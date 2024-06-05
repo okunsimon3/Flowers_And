@@ -2,7 +2,7 @@
 
 
 if(!empty($_POST)) {
-    $recipient = "okunsimon3@gmail.com";
+    $recipient = "kdulen@gmail.com";
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
     $title = "New Message From Contact Form";

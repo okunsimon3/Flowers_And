@@ -131,7 +131,9 @@ nav ul li {
 }
 
 /*Contact mobile*/
-
+table {
+    margin-bottom: 2rem;
+}
 form {
     display: block;
     padding: 0;
